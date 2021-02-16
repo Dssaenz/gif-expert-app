@@ -3,8 +3,8 @@ import React, { useState } from 'react'
 import AddCategory from './components/add-category'
 import GifGrid from './components/gif-grid'
 
-const GifExpertApp = () => {
-	const [categories, setCategories] = useState([])
+const GifExpertApp = ({ defaultCategories = [] }) => {
+	const [categories, setCategories] = useState(defaultCategories);
 
 	return (
 		<>

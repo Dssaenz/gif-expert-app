@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test in <GifGrid /> component It should display the component correctly 1`] = `
+<h1>
+  Cargando...
+</h1>
+`;

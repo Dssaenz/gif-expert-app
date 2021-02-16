@@ -1,24 +1,24 @@
-import React, { useState } from 'react'
-import PropTypes from 'prop-types'
-
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 const AddCategory = ({ setCategories }) => {
-	const [inputValues, setInputValues] = useState('')
+	const [inputValues, setInputValues] = useState('');
 
 	const handleValue = e => {
-		setInputValues(e.target.value)
+		setInputValues(e.target.value);
 	}
 
 	const handleSubmit = e => {
 		e.preventDefault()
 		if(inputValues.trim().length > 2){
-			setCategories(cat => [ inputValues, ...cat ])
-			setInputValues('')
-		}
-	}
+			setCategories(cat => [ inputValues, ...cat ]);
+			setInputValues('');
+		};
+	};
 
 	return(
 		<form onSubmit={handleSubmit}>
+			<p>{inputValues}</p>
 			<input
 				type="text"
 				value={inputValues}
